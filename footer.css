@@ -1,0 +1,290 @@
+
+:root {
+    /* Primary Color Scheme */
+    --lpi-primary: #0A2463;
+    --lpi-secondary: #FF6B35;
+    --lpi-accent: #0A2463;
+    --lpi-light: #F8F9FA;
+    --lpi-dark: #2B2D42;
+    --lpi-border: rgba(10, 36, 99, 0.15);
+    /* Extended Color System */
+    --lpi-saffron: #FF671F;
+    --lpi-green: #046A38;
+    --lpi-gold: #FFD700;
+    --lpi-maroon: #8B0000;
+    --lpi-sky: #87CEEB;
+    
+    /* Typography */
+    --heading-font: 'Rajdhani', sans-serif;
+    --body-font: 'Rajdhani', sans-serif;
+    
+
+
+
+/* Base Footer Structure */
+.lpi-main-footer{
+    background: linear-gradient(152deg, 
+        var(--lpi-primary) 0%, 
+        #0d3b6a 100%);
+    color: rgba(255, 255, 255, 0.92);
+    padding: 0rem 0 0rem;
+    font-family: 'Poppins', sans-serif;
+    border-top: 4px solid var(--lpi-secondary);
+    position: relative;
+    overflow: hidden;
+    padding-top: 0 !important;
+  }
+  
+  /* Decorative Accent */
+  .lpi-main-footer::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--lpi-secondary) 30%, 
+        rgba(255, 153, 51, 0.3) 100%);
+  }
+  
+  /* Footer Container Grid */
+  .lpi-footer-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative;
+  }
+  
+  .lpi-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+  
+  /* Footer Sections */
+  .lpi-footer-section {
+    padding: 2rem;
+    position: relative;
+  }
+  
+  #footer-heading {
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    color: white;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  #footer-heading::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60%;
+    height: 3px;
+    background: var(--lpi-secondary);
+  }
+  
+  .lpi-footer-section h4 {
+    font-size: 1.5rem;
+    color: var(--lpi-secondary);
+    margin-bottom: 1.8rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    font-weight: 600;
+  }
+  
+  /* Address Block */
+  .lpi-footer-address p {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    margin: 1.4rem 0;
+    color: rgba(255, 255, 255, 0.88);
+    line-height: 1.6;
+  }
+  
+  .lpi-footer-address i {
+    color: var(--lpi-secondary);
+    font-size: 1.4rem;
+    min-width: 30px;
+    text-align: center;
+  }
+  
+  /* Navigation Links */
+  .lpi-footer-links {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 0.8rem;
+  }
+  
+  .lpi-footer-links a {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 6px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .lpi-footer-links a::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--lpi-secondary);
+    opacity: 0.1;
+    transition: left 0.4s ease;
+    z-index: 0;
+  }
+  
+  .lpi-footer-links a:hover {
+    color: var(--lpi-secondary);
+    padding-left: 1.8rem;
+  }
+  
+  .lpi-footer-links a:hover::before {
+    left: 0;
+  }
+  
+  /* Social Media */
+  .lpi-social-grid {
+    display: flex;
+    gap: 1.2rem;
+    margin: 2rem 0;
+  }
+  
+  .lpi-social-link {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .lpi-social-link:hover {
+    background: var(--lpi-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 153, 51, 0.2);
+  }
+  
+  .lpi-social-link i {
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.9);
+  }
+  
+  /* Legal Section */
+  .lpi-footer-legal {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 3rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+  
+  .lpi-legal-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.8rem;
+  }
+  
+  .lpi-legal-links a {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    font-size: 0.95rem;
+    position: relative;
+    padding: 0.5rem 0;
+  }
+  
+  .lpi-legal-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--lpi-secondary);
+    transition: width 0.3s ease;
+  }
+  
+  .lpi-legal-links a:hover::after {
+    width: 100%;
+  }
+  
+  .lpi-copyright-notice {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 2rem;
+    letter-spacing: 0.4px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .lpi-footer-grid {
+        gap: 2.5rem;
+    }
+    
+    #footer-heading {
+        font-size: 2rem;
+    }
+    
+    .lpi-footer-section {
+        padding: 1.5rem 0;
+    }
+    
+    .lpi-legal-links {
+        gap: 1.5rem;
+    }
+  }
+  
+  /* Animations */
+  @keyframes wave {
+      0% { transform: rotate(0deg); }
+      25% { transform: rotate(15deg); }
+      50% { transform: rotate(-10deg); }
+      75% { transform: rotate(5deg); }
+      100% { transform: rotate(0deg); }
+  }
+  
+  @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+  }
+  
+  /* Print Styles */
+  @media print {
+      .main-nav,
+      .nav-toggle,
+      .hero-media,
+      .social-grid,
+      .footer-legal {
+          display: none !important;
+      }
+  
+      body {
+          font-size: 1.2rem;
+          background: white !important;
+          color: black !important;
+      }
+  
+      .policy-card {
+          box-shadow: none;
+          border: 1px solid #ddd;
+          page-break-inside: avoid;
+      }
+  }}
